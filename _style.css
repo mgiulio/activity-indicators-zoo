@@ -1,0 +1,63 @@
+@import 'normalize-lite.css';
+@import 'hola-bars.css';
+
+:root {
+	--barColor: #E09D63;
+	
+	--itemsGap: 20px;
+}
+
+body {
+	background: #E2E2D2;
+}
+
+header {
+	color: #B3B3B3;
+	text-align: center;
+}
+
+#activity-indicators {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.activity-indicator-frame {
+	width: 200px;
+	height: 180px;
+	margin: calc(var(--itemsGap) / 2);
+	position: relative;
+	background-color: #d6d6d6;
+	border-radius: 5px;
+}
+.activity-indicator-frame .activity-indicator {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.footer {
+	padding: 20px 10px;
+}
+.footer .credits {
+	margin: 0;
+	text-align: center;
+	
+	font-family: sans-serif;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	
+	color: #aaa;
+}
+.footer .credits .love {
+	color: #de8686;
+}
+.footer .credits a {
+	text-decoration: none;
+	color: #aaa;
+}
+.footer .credits a:hover {
+	text-decoration: none;
+	color: #888;
+}

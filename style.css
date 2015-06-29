@@ -1,0 +1,342 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/* Lite version */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+/* 
+ * A CSS-only 'hola-wave' spinner parameterized with CSS variables.
+ *
+ * Can be post-processed with the [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties) [PostCSS](https://github.com/postcss/postcss) plugin.
+ * 
+ * Ported and adapted from http://tobiasahlin.com/spinkit/ , the third spinner.  
+ */
+
+.hola-bars {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	
+	font-size: 0px;
+ }
+
+.hola-bars > * {
+	display: inline-block;
+	width: 5px;
+	height: 25px;
+	margin-right: 5px;
+	
+	background-color: #E09D63;
+	
+	-webkit-animation: stretch 1.2s infinite ease-in-out;
+	
+	        animation: stretch 1.2s infinite ease-in-out;
+}
+.hola-bars > *:last-child {
+	margin-right: 0;
+}
+
+.hola-bars > *:nth-child(2) {
+	-webkit-animation-delay: 0.05s;
+	        animation-delay: 0.05s;
+}
+.hola-bars > *:nth-child(3) {
+	-webkit-animation-delay: 0.1s;
+	        animation-delay: 0.1s;
+}
+.hola-bars> *:nth-child(4) {
+	-webkit-animation-delay: 0.15s;
+	        animation-delay: 0.15s;
+}
+.hola-bars > *:nth-child(5) {
+	-webkit-animation-delay: 0.2s;
+	        animation-delay: 0.2s;
+}
+
+@-webkit-keyframes stretch {
+	0%, 40% { 
+		-webkit-transform: scaleY(1.0); 
+		        transform: scaleY(1.0);
+	}  
+	20% { 
+		-webkit-transform: scaleY(2.0); 
+		        transform: scaleY(2.0);
+	}
+}
+
+@keyframes stretch {
+	0%, 40% { 
+		-webkit-transform: scaleY(1.0); 
+		        transform: scaleY(1.0);
+	}  
+	20% { 
+		-webkit-transform: scaleY(2.0); 
+		        transform: scaleY(2.0);
+	}
+}
+
+body {
+	background: #E2E2D2;
+}
+
+header {
+	color: #B3B3B3;
+	text-align: center;
+}
+
+#activity-indicators {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.activity-indicator-frame {
+	width: 200px;
+	height: 180px;
+	margin: 10px;
+	position: relative;
+	background-color: #d6d6d6;
+	border-radius: 5px;
+}
+.activity-indicator-frame .activity-indicator {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+
+.footer {
+	padding: 20px 10px;
+}
+.footer .credits {
+	margin: 0;
+	text-align: center;
+	
+	font-family: sans-serif;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	
+	color: #aaa;
+}
+.footer .credits .love {
+	color: #de8686;
+}
+.footer .credits a {
+	text-decoration: none;
+	color: #aaa;
+}
+.footer .credits a:hover {
+	text-decoration: none;
+	color: #888;
+}

@@ -1,0 +1,64 @@
+#!/usr/bin/env node
+
+var 
+	fs = require('fs')
+;
+
+var targets = {
+	dev: function() {
+		css();
+	}
+};
+
+run();
+
+function run() {
+	var 
+		argv = process.argv,
+		target
+	;
+	if (argv.length === 3)
+		target = argv[2];
+	else
+		target = 'dev';
+	
+	try {
+		console.log('Running ' + target + ' target');
+		targets[target]();
+	}
+	catch(e) {
+		console.log('Build process failed: ' + e.message);
+	}
+}	
+
+/*
+ * Tasks
+ */
+ 
+ function css() {
+	console.log('Task css...');
+	
+	var postcss = require('postcss');
+	
+	var input = fs.readFileSync('_style.css', 'utf8');
+
+	postcss([
+		require('postcss-inline-comment')(),
+		require('postcss-import')({
+			//path: 'src/css'
+		}),
+		require('postcss-custom-properties')(),
+		require('postcss-calc')({
+			preserve: false,
+			precision: 5
+		}),
+		require('autoprefixer-core')()
+	])
+	.process(input, { 
+		//from: 'src/app.css', 
+		//to: 'app.css' 
+	})
+	.then(function(result) {
+		fs.writeFileSync('style.css', result.css);
+    });
+}
